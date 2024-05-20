@@ -1,4 +1,4 @@
-package Decorator;
+package designpatterns.Decorator;
 
 public class Sugar extends CoffeeDecorator{
 

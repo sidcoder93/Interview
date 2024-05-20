@@ -1,4 +1,4 @@
-package Decorator;
+package designpatterns.Decorator;
 
 public abstract class CoffeeDecorator implements Coffee{
 
