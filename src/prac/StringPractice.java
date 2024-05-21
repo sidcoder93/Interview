@@ -1,5 +1,7 @@
 package prac;
 
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -25,6 +27,8 @@ public class StringPractice {
         checkAnagram("Mother In Lawwwww", "Hitler Woman");
 
         maxOccuringChac("Java Concept of the day");
+
+        testBuilder();
 
     }
     public static void countNoOfWordsInString(String str) {
@@ -140,6 +144,16 @@ public class StringPractice {
        System.out.println("Max count of char " + characterLongEntry.getKey() + " :" + characterLongEntry.getValue());
 
 
+   }
+
+   static void testBuilder(){
+
+       StringBuilder sb = new StringBuilder("Siddharth");
+
+       StringBuilder sb1 = new StringBuilder("Siddharth");
+       sb1.append("Vaidya");
+
+       System.out.println(sb1.compareTo(sb));
    }
 
 
