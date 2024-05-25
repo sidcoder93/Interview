@@ -45,7 +45,7 @@ public class StringPractice {
             }
         }
 
-        System.out.println(count);
+        System.out.println("No of words in String is  "+count);
     }
 
 
@@ -53,8 +53,7 @@ public class StringPractice {
      * Count the occurance of a character in String without using any loop
      *
      */
-
-
+    
     public static void countCharacters(String str,  char c) {
 
         String newString =  str.replace(String.valueOf(c), "");

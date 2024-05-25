@@ -1,4 +1,4 @@
-package prac;
+package shallowcopy;
 
 public class ShallowCopy implements Cloneable{
 
