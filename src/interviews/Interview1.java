@@ -1,9 +1,13 @@
+package interviews;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-
+/**
+ * @IBM
+ */
 public class Interview1 {
 
     public static void main(String[] args) {

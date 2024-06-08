@@ -74,11 +74,11 @@ public class StringPractice {
 
 
        char[] c =  str.toCharArray();
-       String rev= "";
+       StringBuilder rev= new StringBuilder();
 
        for (int i=c.length-1; i>=0; i--){
 
-           rev = rev + c[i];
+           rev.append(c[i]);
        }
 
         System.out.println(rev);

@@ -1,9 +1,14 @@
-package hashmap;
+package interviews;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Main {
+
+/**
+ * @LTIMindTree
+ * @Capgemini
+ */
+public class Interview3 {
 
     public static void main(String[] args) {
 
@@ -33,6 +38,23 @@ public class Main {
         System.out.println(output);
         q1();
         q2();
+
+        int a = 5;
+
+        String s = a + "";
+        System.out.println(s);
+
+        List<Integer> list = Arrays.asList(1, 5, 12, 34, 17);
+
+        list.stream()
+                .map(String::valueOf)
+                .filter(x -> x.startsWith("1"))
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
+
+
+
+        sortInAlphabaticalOrder();
 
     }
 
@@ -80,6 +102,52 @@ public class Main {
 
 
         }
+
+
+        public void ArrayToListConvert(){
+
+
+                int[] arr = {1,2,3,4,5,6};
+
+            List<Integer> list = Arrays.asList(Arrays.stream(arr).boxed().toArray(Integer[]::new));
+
+            String [] array = {"JAVA", "Spring", "SpringBoot"};
+
+            List<String> list1 = Arrays.asList(array);
+
+
+        }
+
+        public static void ListToArray(){
+
+
+            List<Integer> integers = List.of(1, 2, 3, 4, 5);
+
+            int[] array = integers.stream().mapToInt(Integer::intValue).toArray();
+
+            List<String> spring = List.of("Spring", "java");
+
+            String[] array1 = spring.toArray(new String[spring.size()]);
+
+
+        }
+
+        public static void sortInAlphabaticalOrder(){
+
+        String s = "Siddharth";
+
+            System.out.println(s);
+
+            char[] charArray = s.toLowerCase().toCharArray();
+            Arrays.sort(charArray);
+
+            String sorted = new String(charArray);
+            System.out.println(sorted);
+
+        }
+
+
+
 
 
 

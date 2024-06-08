@@ -41,12 +41,9 @@ public class Questions {
 
         System.out.println(secondLargest);
     }
-
-
     /*
     find the equality of 2 arrays
      */
-
     public static void question2(){
 
 

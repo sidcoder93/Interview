@@ -24,9 +24,8 @@ public class LinkedListPractice {
         linkedList.add("JDBC");
 
 
-
-
         if(linkedList.contains("Spring")){
+
 
             System.out.println("Index of the element JSP "+linkedList.indexOf("JSP"));
         }

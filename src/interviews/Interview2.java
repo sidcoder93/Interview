@@ -1,4 +1,4 @@
-package prac;
+package interviews;
 
 import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
@@ -7,6 +7,10 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+
+/**
+ * @Wipro f2f
+ */
 public class Interview2 {
 
     public static void main(String[] args) {
