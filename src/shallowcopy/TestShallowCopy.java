@@ -9,7 +9,7 @@ public class TestShallowCopy {
 
         ShallowCopy original = new ShallowCopy(num);
 
-        //------- creating shallow copy using clone method ------
+        //------- creating shallow copy using clone method ------//
         ShallowCopy copy = (ShallowCopy) original.clone();
 
         System.out.println(original==copy);
