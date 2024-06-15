@@ -2,45 +2,29 @@ package prac;
 
 import com.sun.security.jgss.GSSUtil;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class LinkedListPractice {
 
     public static void main(String[] args) {
 
+        //linkedListAsQueue();
 
-        linkedListAsQueue();
+       //  list();
+       // list1();
+        // linkedListPrac();
+       // listAsQueue();
+    try {
 
-        //Find the element in linkedlist and its position in the list
+        listAsStack();
 
-        List<String> linkedList = new LinkedList<>();
+    }catch (MyException ex){
 
-        linkedList.add("JAVA");
-        linkedList.add("J2EE");
-        linkedList.add("JSP");
-        linkedList.add("Servlets");
-        linkedList.add("JDBC");
+        System.out.println("Caught");
+        System.out.println(ex.getMessage());
+    }
 
 
-        if(linkedList.contains("Spring")){
-
-
-            System.out.println("Index of the element JSP "+linkedList.indexOf("JSP"));
-        }
-        else{
-            System.out.println("No such Element exists");
-        }
-
-        //traverse the elements in reverse order in Linkedlist
-
-        Iterator<String> iterator = ((LinkedList<String>) linkedList).descendingIterator();
-
-        while (iterator.hasNext()){
-
-            System.out.println(iterator.next());
-        }
     }
 
     public static void linkedListAsQueue(){
@@ -116,16 +100,125 @@ public class LinkedListPractice {
 
         System.out.println(newLinkedList);
 
+    }
 
 
+    public static void list(){
 
 
+        List<String> linkedList = new LinkedList<>();
+        long startTime = System.currentTimeMillis();
+        for (int i=1; i<1000000; i++){
 
+            linkedList.add("Siddharth");
 
+        }
 
+        //linkedList.get(100);
+       // linkedList.remove(101);
+
+        for(int index= 101; index<200 ; index++) {
+            linkedList.add(index, "Siddharth");
+        }
+        Long endTime = System.currentTimeMillis();
+
+        System.out.println("Total ms taken to add elements linkedList is: " + (endTime-startTime) + " ms");
 
 
     }
+
+    public static void list1(){
+
+
+        List<String> arrayList = new ArrayList<>();
+        long startTime = System.currentTimeMillis();
+        for (int i=1; i<1000000; i++){
+
+            arrayList.add("Siddharth");
+
+        }
+       // arrayList.get(100);
+       // arrayList.remove(101);
+
+        for(int index= 101; index < 200; index++) {
+            arrayList.add(index, "Siddharth");
+        }
+        Long endTime = System.currentTimeMillis();
+
+        System.out.println("Total ms taken to add elements in Arraylist is: " + (endTime-startTime) + " ms");
+
+
+    }
+
+    public static  void linkedListPrac(){
+
+        List<String> linkedList = new LinkedList<>();
+
+        linkedList.add("A");
+        linkedList.add("B");
+        linkedList.add("C");
+
+
+        ListIterator<String> stringListIterator = linkedList.listIterator(linkedList.size());
+
+        while(stringListIterator.hasPrevious()){
+
+            System.out.println(stringListIterator.previous());
+        }
+    }
+
+    public static void listAsQueue(){
+
+        // in this scenario list will behave as FIFO
+
+        LinkedList<String> list = new LinkedList<>();
+
+        list.offer("A");
+        list.offer("B");
+        list.offer("C");
+        list.offer("D");
+        list.offer("E");
+
+
+        System.out.println(list);
+
+        System.out.println(list.poll());  //a
+        System.out.println(list.poll());  //B
+
+        System.out.println(list.pollFirst()); //C
+        System.out.println(list.peek());  //D
+        //System.out.println(list.peek());
+        System.out.println(list.peekLast()); //E
+        System.out.println(list.pollLast());  //E
+        System.out.println(list.peekLast()); //D
+
+    }
+
+     public static void listAsStack() throws MyException {
+
+        LinkedList<Integer> stack = new LinkedList<>();
+
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
+
+         System.out.println(stack);
+
+         try {
+             System.out.println(stack.pop());
+             System.out.println(stack.pop());
+             System.out.println(stack.pop());
+             System.out.println(stack.pop());
+             System.out.println(stack.pop());
+
+         }catch (NoSuchElementException ex){
+             System.out.println("There is no element in the Stack : " + ex.getMessage());
+             throw new MyException("Thrown NoSuchElementException", ex.getCause());
+
+
+         }
+     }
 
 
 }

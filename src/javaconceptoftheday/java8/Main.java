@@ -1,6 +1,6 @@
 package javaconceptoftheday.java8;
 
-import javax.swing.*;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -122,18 +122,9 @@ public class Main {
                 .entrySet()
                 .stream().max(Map.Entry.comparingByValue()).get();
 
-
-
-
         System.out.println("Most Frequent Element : "+stringLongEntry.getKey());
 
         System.out.println("Count : "+stringLongEntry.getValue());
-
-
-
-
-
-
 
     }
 
