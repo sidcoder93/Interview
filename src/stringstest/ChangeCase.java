@@ -2,13 +2,20 @@ package stringstest;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Optional;
 
 public class ChangeCase {
 
 
     public static void main(String[] args) {
 
+        Optional<String> optional = Optional.ofNullable(null);
+        String result = optional.orElse("defualt");
+        System.out.println(result);
        // System.out.println(changeCaseOfString("AbcDE"));
+        char c = 'A';
+        System.out.println(c++);
+        System.out.println(++c);
 
         arrangeArray();
 
@@ -52,8 +59,8 @@ public class ChangeCase {
         System.out.println(Arrays.toString(arr));
 
 
-
-
-
     }
+
+
+
 }

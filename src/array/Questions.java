@@ -2,6 +2,7 @@ package array;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Questions {
 
@@ -10,6 +11,7 @@ public class Questions {
         question1();
         question2();
         question3();
+        ReverseArray();
 
     }
 
@@ -21,6 +23,7 @@ public class Questions {
         int[] arr = {12, 1, 23, 56, 25, 16, 55, 1};
         int largest = arr[0];
         int secondLargest = arr[1];
+
 
         if (arr[1] > arr[0]) {
 
@@ -118,6 +121,29 @@ public class Questions {
               }
          }
 
+     }
+
+     public static void ReverseArray(){
+
+
+         int[] arr = {1,4,6,8,9};
+
+         System.out.println(Arrays.toString(arr));
+
+         int start = 0;
+         int end = arr.length-1;
+
+         while(start<end){
+
+             int temp = arr[end];
+             arr[end] = arr[start];
+             arr[start] = temp;
+
+             start++;
+             end--;
+         }
+
+         System.out.println(Arrays.toString(arr));
      }
 
 

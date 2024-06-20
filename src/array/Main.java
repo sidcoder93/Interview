@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-       int [] arr = {1, 50, 98, 101, 150};
+       int [] arr = {1, 50, -99, 102, 150};
        int target = 100;
        int nearestNum=arr[0];
 

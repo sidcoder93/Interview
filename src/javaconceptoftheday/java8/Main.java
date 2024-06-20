@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        //how to sort two unsorted array int single sorted array
+        //how to merge two unsorted array int single sorted array
 
         int[] a1 = {1,5,6,3,2};
         int[] a2 = {2,5,9,1,7};
@@ -40,7 +40,9 @@ public class Main {
                 .limit(3)
                 .forEach(System.out::println);
 
-        System.out.println("\n ------ Java 8 program to check if two strings are anagrams or not---------");
+
+
+        System.out.println("\n ------ Java 8 program to check if two strings are anagrams or not ---------");
 
         String s1 = "Race Car";
         String s2 = "CarRace";

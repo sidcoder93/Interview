@@ -2,6 +2,7 @@ package interviews.OnlineTest;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class LongestConsecutiveArray {
 
@@ -15,9 +16,9 @@ public class LongestConsecutiveArray {
 
 
         //convert to set
-        int [] arr = {100,28,7,3,4};
+        int [] arr = {100,28,7,3,4,5,16,17};
 
-        Set<Integer> set = new HashSet<>(5);
+        Set<Integer> set = new TreeSet<>();
 
         for(int num : arr){
 
@@ -42,7 +43,6 @@ public class LongestConsecutiveArray {
                 }
 
                 longestSeq = Math.max(longestSeq, currentStreak);
-                System.out.println(longestSeq);
 
             }
 

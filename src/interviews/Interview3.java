@@ -1,7 +1,9 @@
 package interviews;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 /**
@@ -20,6 +22,15 @@ public class Interview3 {
         map.put(8, 5);
         map.put(9, 5);
 
+        System.out.println("-----------");
+
+       map.entrySet()
+               .stream()
+               .sorted(Comparator.comparingInt(Map.Entry::getKey))
+               .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new))
+               .forEach((k,v) -> System.out.println(k + " " +v));
+
+        System.out.println("------------");
 
         //need output as <7,[5,6,7]> <5, [8,9]>
 
@@ -34,6 +45,7 @@ public class Interview3 {
             }
             output.get(value).add(key);
         }
+
 
         System.out.println(output);
         q1();
@@ -55,6 +67,8 @@ public class Interview3 {
 
 
         sortInAlphabaticalOrder();
+        hashMapQuestion();
+        findNearestNumber(100);
 
     }
 
@@ -144,7 +158,54 @@ public class Interview3 {
             String sorted = new String(charArray);
             System.out.println(sorted);
 
+            String collect = Stream.of(s.toLowerCase().split("")).sorted().collect(Collectors.joining());
+            System.out.println(collect);
+
         }
+
+
+        public static void hashMapQuestion(){
+
+        String s = "Hello Hi Hello Hi How Are You Hello";
+
+                Stream.of(s.split(" "))
+                        .collect(Collectors.groupingBy(Function.identity(),  LinkedHashMap::new, Collectors.counting()))
+                        .forEach((k,v) -> System.out.println(k + " " +v));
+
+        }
+
+
+        public static void findNearestNumber(int n){
+
+
+            int [] arr = {1,10,95,-100,80,101};
+
+            int nearest = arr[0];
+            int difference = difference(n,nearest);
+
+            for(int i=1; i<arr.length; i++){
+
+                int diff = difference(n, arr[i]);
+
+                if(diff<difference){
+                    difference= diff;
+                    nearest = arr[i];
+                }
+            }
+
+            System.out.println(nearest);
+
+    }
+
+
+    public static int difference(int target, int n){
+
+        if(n<0){
+            return target+n;
+        }
+        else return Math.abs(target-n);
+
+    }
 
 
 
