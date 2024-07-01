@@ -124,10 +124,6 @@ public class StringPractice {
 
    }
 
-    /**
-     * Find Max count of the character in a String
-     * @param st
-     */
 
    static void maxOccuringChac(String st){
 
@@ -151,6 +147,7 @@ public class StringPractice {
 
        StringBuilder sb1 = new StringBuilder("Siddharth");
        sb1.append("Vaidya");
+
 
        System.out.println(sb1.compareTo(sb));
    }
