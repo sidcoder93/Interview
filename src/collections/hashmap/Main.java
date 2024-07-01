@@ -1,6 +1,7 @@
 package collections.hashmap;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -8,6 +9,17 @@ public class Main {
     public static void main(String[] args) {
 
         findElements();
+
+        String str = "siddharth";
+
+        Map<Character, Long> map = str.chars()
+                .mapToObj(c -> (char)c)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        for(Map.Entry<Character, Long> count : map.entrySet()){
+
+            System.out.println(count.getKey() + " " +count.getValue());
+        }
 
     }
 
