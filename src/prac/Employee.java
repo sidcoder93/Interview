@@ -33,4 +33,25 @@ public class Employee {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if(this == obj){
+            return true;
+        }
+
+        if(!(obj instanceof Employee)){
+            return false;
+        }
+
+        Employee student = (Employee)obj;
+
+        return this.age == student.age;
+    }
 }
