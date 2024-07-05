@@ -4,7 +4,10 @@ public class FabonacciTest {
 
     public static void main(String[] args) {
 
-        System.out.println("Fibonacci of 10: " +fib(10) );
+       for(int i=0; i<=100; i++){
+
+           System.out.print(fib(i) + " ");
+       }
 
     }
 

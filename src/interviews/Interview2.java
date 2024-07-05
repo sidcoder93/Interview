@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 /**
@@ -17,6 +18,15 @@ public class Interview2 {
 
 
         String st = "Hello Sid Hello how Hello How";
+
+
+        System.out.println("---------------");
+        Map<String, Long> collect1 = Stream.of(st.split(" ")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        collect1.forEach((k,v) -> System.out.println(k + " " +v));
+
+        System.out.println("----------------------");
+
 
         String[] array = st.split(" ");
 

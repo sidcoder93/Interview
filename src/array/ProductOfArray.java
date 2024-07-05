@@ -8,22 +8,30 @@ public class ProductOfArray {
 
         //[1,3,4,2] --> [24,8,6,12]
 
-        int[] arr = {1,3,4,2};
-        int product=1;
+       int[] nums = {1,3,4,2};
+       int[] productNum = new int[nums.length];//output->{24,8,6,12}
 
-        for(int i=0; i<arr.length-1;i++){
+       for(int i=0; i<nums.length; i++){
 
-            for (int j=i+1; j<arr.length; j++){
-                product = product*arr[j];
-                if(i>0)
-                for (int k = i-1; k>0; k--){
-                    product = product*arr[k];
-                }
-                arr[i] = product;
-            }
-            product=1;
-        }
-        System.out.println(Arrays.toString(arr));
+           //right index product
+           int rightProduct=1;
+           int leftProduct=1;
+           for(int j=i+1; j<nums.length; j++){
+
+               rightProduct = rightProduct*nums[j];
+           }
+           for(int j=i-1; j>=0; j--){
+
+               leftProduct = leftProduct*nums[j];
+           }
+
+           productNum[i] = leftProduct*rightProduct;
+
+       }
+
+        System.out.println(Arrays.toString(productNum));
+
+
 
 
     }

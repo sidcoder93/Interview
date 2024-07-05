@@ -43,17 +43,17 @@ public class FindCommonElements {
 
         System.out.println(Arrays.toString(set1.toArray()));
 
-        anotheApproch();
+        anotherAppraoch();
     }
 
-    public static void anotheApproch(){
+    public static void anotherAppraoch(){
 
 
-        int[] arr1 = {3,5,6,7};
+        int[] arr1 = {3,4,6,7};
 
-        int[] arr2 = {2,5,7,10,12};
+        int[] arr2 = {2,4,7,10,12};
 
-        int[] arr3 = {5,7,9,30,34,50};
+        int[] arr3 = {2,7,9,30,34,50};
 
 
         int i=0; int j=0; int k=0;
@@ -69,12 +69,12 @@ public class FindCommonElements {
                 k++;
             }
 
-            else if (arr1[i]< arr2[j]){
+            else if (arr1[i] < arr2[j]){
 
                 i++;
             }
 
-            else if (arr1[i] > arr2[j]){
+            else if (arr2[j] < arr3[k]){
 
                 j++;
             }
