@@ -8,6 +8,8 @@ public class LinkedListPractice {
 
     public static void main(String[] args) {
 
+        operations();
+
         //linkedListAsQueue();
 
        //  list();
@@ -218,6 +220,35 @@ public class LinkedListPractice {
 
 
          }
+     }
+
+
+     public static void operations(){
+
+         LinkedList<Integer> list = new LinkedList<>();
+
+         System.out.println("------------------Add Elements to the Head-----------------------");
+
+         list.addFirst(10);
+         list.offerFirst(20);
+
+
+         System.out.println(list);
+
+         System.out.println("-----------------------------------------");
+
+         System.out.println("------------------Add Elements to the Tail-----------------------");
+
+         list.add(30);
+         list.offer(40);
+
+         System.out.println(list);
+
+         System.out.println("-----------------------------------------");
+
+
+
+
      }
 
 
