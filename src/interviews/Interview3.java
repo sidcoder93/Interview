@@ -16,7 +16,7 @@ public class Interview3 {
 
         Map<Integer, Integer> map = new HashMap<>();
 
-        map.put(5, 7);
+        map.put(10, 7);
         map.put(6, 7);
         map.put(7, 7);
         map.put(8, 5);

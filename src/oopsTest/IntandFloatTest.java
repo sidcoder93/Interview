@@ -18,6 +18,6 @@ public class IntandFloatTest {
     }
 
     public static void main(String[] args) {
-        m1(10.0,10);
+        m1(10f,10);
     }
 }

@@ -74,6 +74,9 @@ public class Main {
 
         System.out.println("\n --------using java8 -------------------");
 
+
+
+
         IntSummaryStatistics collect = Stream.of(String.valueOf(i).split("")).
                 collect(Collectors.summarizingInt(Integer::parseInt));
 
@@ -111,6 +114,9 @@ public class Main {
 
         int[] array = new int[] {5, 1, 7, 3, 9, 6};
 
+
+        System.out.println();
+
         int[] revArr = IntStream.range(1, array.length).map(e -> array[array.length - e]).toArray();
 
         System.out.println(Arrays.toString(revArr));
@@ -123,6 +129,15 @@ public class Main {
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .entrySet()
                 .stream().max(Map.Entry.comparingByValue()).get();
+
+        Optional<String> first = listOfStrings.stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .map(Map.Entry::getKey)
+                .findFirst();
+
+        System.out.println("-------------------most Frequent element-----------"+first.get());
 
         System.out.println("Most Frequent Element : "+stringLongEntry.getKey());
 
